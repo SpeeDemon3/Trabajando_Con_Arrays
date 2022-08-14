@@ -1,0 +1,41 @@
+let compra = ['cereales', 'monster', 'pan', 'atun', 'zumo', 'chorizo', 'salmorejo'];
+let extraCompra = compra.push('aceite de girasol');
+console.log(compra);
+
+compra.pop();
+console.log(compra);
+
+let peliculas = [
+    {
+        titulo: 'El Padrino',
+        director: 'Francis Ford Coppola',
+        fecha: 1972,
+},
+    {
+        titulo: 'Pulp Fiction',
+        director:'Quentin Tarantino',
+        fecha: 1994,
+    },
+    {
+        titulo: 'Ciudad de Dios',
+        director: 'Fernando Meirelles, Kátia Lund',
+        fecha: 2002,
+    }
+];
+
+console.log(peliculas);
+
+let peliculasPosteriores2010 = peliculas.filter(pelicula => peliculas.fecha < 2010);
+console.log(peliculasPosteriores2010);
+
+let directores = peliculas.map((dir) => dir.director);
+console.log(directores);
+
+let titulos = peliculas.map((title) => title.titulo);
+console.log(titulos);
+
+let directoresYTitulos = directores.concat(titulos);
+console.log(directoresYTitulos);
+
+let propagacionLista = [...directores, ...titulos];
+console.log(propagacionLista);
